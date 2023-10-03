@@ -197,6 +197,12 @@ The training environment ('Pre_trained.py') = 0.7 (Test) & 0.15 (Train) & 0.15 (
 # Important Note
 
 Please note that the Open Images Dataset V3 and V6 contain a large number of labels and data, which may require significant computational resources to process completely.
-For Growth_cropped.mp4, Human_annotation = (5000, 1000)
+For Growth_cropped.mp4, Human_annotation = 1000 to 2000 manually annotated can yield a highly accurate model.
+
+TOTAL_FRAME = 12,699
+TEST = (1905) as 0.15 (Train)
+VALIDATION (1905) = as 0.15 (VALIDITATION)
+TEST = 8889
+
 
     
