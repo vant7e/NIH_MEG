@@ -19,8 +19,11 @@ This repository contains code for object detection and eye movement experiments 
 
 This project focuses on object detection tasks and eye movement experiments using video stimuli. The scripts are provided to extract features from video frames and classify them using the VGG16 model, object detection based on the TF_Lite3&4 model, and deep training of the modified model on labeled VGG dataset and Growth_cropped. mp4.
 
-# 1 sc_10sec.py: Extract features from frames of the video stimuli presented to participants, 
- 	# Extract a frame every 10 seconds, Change as Need
+# sc_10sec.py
+
+Extract features from frames of the video stimuli presented to participants, 
+ 	
+  	# Extract a frame every 10 seconds, Change as Need
  	frame_interval = 10 
  	frames = []
 	frame_count = 0
@@ -46,7 +49,9 @@ This project focuses on object detection tasks and eye movement experiments usin
 	# Results: Example = 'Frame_Extraction.py'
 
     
-# 2 VVG_dl.py: Each frame of the video can be passed through the VGG16 model to obtain a feature vector representing the content of that frame
+# VVG_dl.py
+
+Each frame of the video can be passed through the VGG16 model to obtain a feature vector representing the content of that frame
  	
 	# Decode and print the top-5 predicted classes for each frame; change as the need
  
@@ -65,19 +70,28 @@ This project focuses on object detection tasks and eye movement experiments usin
 	5: picket_fence (0.00)
 	  *NEED TO BE MANUALLY CORRECT*
 
-# 3 sc_10sec_10.py: Extracted from Growth_cropped.mo4 video every 10 seconds* Extension for sc_10_sec_10.py:
-  	# the image filenames to be in the format of frame_time_in_second.jpg,
+# sc_10sec_10.py
+
+Extracted from Growth_cropped.mo4 video every 10 seconds* Extension for sc_10_sec_10.py:
+	
+ 	# the image filenames to be in the format of frame_time_in_second.jpg,
    	# can be saved as the results as a JSON file and exported as a CSV or text file indicating the further recognized object classes in each frame, easier for post-processing.
 	# Applied to next steps database_for_post_processing_pathway = 'database_pprc.py'
  
-# 4 database_pprc.py: containing frames.json file from video, which includes class labels for further object recognition task in annotated images, and export a CSV or text file indicating what kind of object class is recognized in each frame
-	#Create a list to store frame-to-class mapping
+# database_pprc.py
+
+Contains frames.json file from video, which includes class labels for further object recognition task in annotated images, and export a CSV or text file indicating what kind of object class is recognized in each frame
+	
+ 
+ 	#Create a list to store frame-to-class mapping
  	frame_to_class = []
  	for result in detection_results:
-    frame_number = result['frame_number']  # Assuming 'frame_number' is present
-    class_label = result['class_label']    # Assuming 'class_label' is present
-    frame_to_class.append({'frame_number': frame_number, 'class_label': class_label})
-	can access object detection results like bounding box coordinates and class labels for each frame in your loop, and also access the frame-to-class mapping from the exported CSV or text file as needed for further analysis or reporting.
+    	frame_number = result['frame_number']  # Assuming 'frame_number' is present
+    	class_label = result['class_label']    # Assuming 'class_label' is present
+    	frame_to_class.append({'frame_number': frame_number, 'class_label': class_label})
+
+Can access object detection results like bounding box coordinates and class labels for each frame in your loop, and also access the frame-to-class mapping from the exported CSV or text file as needed for further analysis or reporting:
+
  	# result_pathway = 'image_data.csv'
 
 # Results 
