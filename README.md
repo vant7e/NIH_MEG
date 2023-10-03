@@ -34,7 +34,9 @@ Extract features from frames of the video stimuli presented to participants,
   	json.dump(frames, json_file)
 	Result_Pathway = '/IMAGE_CLASSIFICATION/FRAME_TEST.JSO.FILE'
 	
- 	# saved as JPGfile (pathway = Frame_Extraction.py);   # Save the frame with a filename including the time for the further interpreter
+If wants to saved as JPGfile (pathway = Frame_Extraction.py);   
+	
+ 	# Save the frame with a filename including the time for the further interpreter
 	# Calculate the time in seconds for the current frame # Extract a frame every 1 second
   	  time_in_seconds = frame_count / cap.get(cv2.CAP_PROP_FPS)
 
@@ -46,7 +48,8 @@ Extract features from frames of the video stimuli presented to participants,
 	# Release the video capture object and close the windows
 	cap. release()
 	cv2.destroyAllWindows()
-	# Results: Example = 'Frame_Extraction.py'
+ 
+Results: Example = 'Frame_Extraction.py'
 
     
 # VVG_dl.py
@@ -61,7 +64,7 @@ Each frame of the video can be passed through the VGG16 model to obtain a featur
         for j, (imagenet_id, label, score) in enumerate(decoded_predictions):
             print(f"{j + 1}: {label} ({score:.2f})")
 	    
-  	# results.txt: These feature vectors can then be used as input features for further MEG data analysis, for example; 
+Results.txt: These feature vectors can then be used as input features for further MEG data analysis, for example; 
 	Predictions for Frame 0:
 	1: thatch (0.99)
 	2: boathouse (0.00)
@@ -73,10 +76,9 @@ Each frame of the video can be passed through the VGG16 model to obtain a featur
 # sc_10sec_10.py
 
 Extracted from Growth_cropped.mo4 video every 10 seconds* Extension for sc_10_sec_10.py:
-	
- 	# the image filenames to be in the format of frame_time_in_second.jpg,
-   	# can be saved as the results as a JSON file and exported as a CSV or text file indicating the further recognized object classes in each frame, easier for post-processing.
-	# Applied to next steps database_for_post_processing_pathway = 'database_pprc.py'
+the image filenames to be in the format of frame_time_in_second.jpg,
+can be saved as the results as a JSON file and exported as a CSV or text file indicating the further recognized object classes in each frame, easier for post-processing.
+	- Applied to next steps database_for_post_processing_pathway = 'database_pprc.py'
  
 # database_pprc.py
 
@@ -92,10 +94,10 @@ Contains frames.json file from video, which includes class labels for further ob
 
 Can access object detection results like bounding box coordinates and class labels for each frame in your loop, and also access the frame-to-class mapping from the exported CSV or text file as needed for further analysis or reporting:
 
- 	# result_pathway = 'image_data.csv'
+ 	result_pathway = 'image_data.csv'
 
 # Results 
-	# 1: VVG_16_IMAGE_CLASSIFICATION = 'Results.txt'
- 	# 2: sc_10sec_10.py = 'frames.json'
-  	# 3. sc_10sec.py = 'frames_test.json
-   	# 4. database_pprc.py = image_data.csv'
+	VG_16_IMAGE_CLASSIFICATION = 'Results.txt'
+ 	sc_10sec_10.py = 'frames.json'
+  	sc_10sec.py = 'frames_test.json
+   	database_pprc.py = image_data.csv'
