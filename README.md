@@ -1,4 +1,4 @@
-# image_classification
+# NIH_MEG_MELTZER
 Object_detection_task &amp; eye_movement_experiment
 # Image Classification and Object Detection
 
