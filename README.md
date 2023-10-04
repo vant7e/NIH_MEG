@@ -22,9 +22,11 @@ Before training the object detection model, ensure that the input images are of 
 
 # Annotations
 
-  Prepared Training data = 'object_task_train_10_VVG_anonated.csv' as 'Human_anonated.csv'
+        Prepared Training data = 'object_task_train_10_VVG_anonated.csv' as 'Human_anonated.csv'
+        
   manual_label_anonated.cvs = (selected LabelName ('Image_Label_Name, Class_name') to generate Xmin, Ymin, Xmax, and Ymax for bounding box ('bbx')  : 
-     The CSV file includes the following attributes:
+      
+      # The CSV file includes the following attributes:
       
        = {
     
@@ -82,24 +84,33 @@ Before training the object detection model, ensure that the input images are of 
     attributes:
 
  
-  ***Label_Name**:  represents the class label or category of an object in an image. It is often associated with a unique identifier (e.g., "/m/05_4_") that corresponds to a specific object category.*
+  ***Label_Name**:  
+  
+  represents the class label or category of an object in an image. It is often associated with a unique identifier (e.g., "/m/05_4_") that corresponds to a specific object category.*
   
     Each LabelName indicates what kind of object is present in the image. For example, "/m/05_4_" might correspond to "Car," and "/m/04hgtk" might correspond to "House." 
 
-  ***Confidence***: indicates the level of confidence or certainty associated with the assigned label or category. It's typically a value between 0 and 1, where 0 indicates low confidence, and 1 indicates high confidence.*
+  ***Confidence***: 
+  
+  indicates the level of confidence or certainty associated with the assigned label or category. It's typically a value between 0 and 1, where 0 indicates low confidence, and 1 indicates high confidence.*
   
     A high confidence value suggests that the label is considered reliable, while a low confidence value might indicate uncertainty.
 
-  ***Source**: attribute indicates how the annotation was created:
+  ***Source**: 
+  
+  attribute indicates how the annotation was created:
   
         "machine" indicates machine-generated labels.
 
-  ***Bounding Box**: Attributes (XMin, XMax, YMin, YMax): define the coordinates of bounding boxes around objects in the images. 
-   Specify the location and size of objects within the image.
+  ***Bounding Box**: 
+  
+  Attributes (XMin, XMax, YMin, YMax): define the coordinates of bounding boxes around objects in the images & Specify the location and size of objects within the image.
     
     XMin and YMin =  the minimum x and y coordinates of the bounding box, while XMax and YMax represent the maximum x and y coordinates.
 
-  ***Additional Bounding Box Attributes (IsOccluded, IsTruncated, IsGroupOf, IsDepiction, IsInside)***: attributes provide additional information about the bounding boxes:
+  ***Additional Bounding Box Attributes (IsOccluded, IsTruncated, IsGroupOf, IsDepiction, IsInside)***: 
+  
+  attributes provide additional information about the bounding boxes:
       
       IsOccluded: Indicates if the object is occluded by another object.
       IsTruncated: Indicates if the object extends beyond the image boundary.
@@ -107,7 +118,7 @@ Before training the object detection model, ensure that the input images are of 
       IsDepiction: Indicates that the object is a depiction, such as a drawing or cartoon.
       IsInside: Indicates if the image was taken from inside the object.
 
-# Combine Human Annotation with Open Images Dataset V3:
+# Combine Human Annotation with Open Images Dataset V3
 
   *IMPORTANT* Merge the annotations while ensuring there are no naming conflicts or duplicates with Open Images Dataset V3 & V6:
 
