@@ -25,14 +25,18 @@ Before training the object detection model, ensure that the input images are of 
   Prepared Training data = 'object_task_train_10_VVG_anonated.csv' as 'Human_anonated.csv'
   manual_label_anonated.cvs = (selected LabelName ('Image_Label_Name, Class_name') to generate Xmin, Ymin, Xmax, and Ymax for bounding box ('bbx')  : 
      The CSV file includes the following attributes:
-    =
+      
+       = {
+    
     filename: Image file name
+    
     file_size: File size
     region_count: Number of regions (bounding boxes)
     region_id: Region ID
     region_shape_attributes: Attributes of the region's shape
     region_attributes: Region attributes, including class labels
-
+      }
+      
     ATTRIBUTION SET VALUE = {' 
       NAME = Class_Name
       ASSIGNED_ID =  Label_used_in_Annotations = 26 #Can be changed as need
@@ -79,13 +83,16 @@ Before training the object detection model, ensure that the input images are of 
 
  
   ***Label_Name**:  represents the class label or category of an object in an image. It is often associated with a unique identifier (e.g., "/m/05_4_") that corresponds to a specific object category.*
+  
     Each LabelName indicates what kind of object is present in the image. For example, "/m/05_4_" might correspond to "Car," and "/m/04hgtk" might correspond to "House." 
 
   ***Confidence***: indicates the level of confidence or certainty associated with the assigned label or category. It's typically a value between 0 and 1, where 0 indicates low confidence, and 1 indicates high confidence.*
+  
     A high confidence value suggests that the label is considered reliable, while a low confidence value might indicate uncertainty.
 
   ***Source**: attribute indicates how the annotation was created:
-  "machine" indicates machine-generated labels.
+  
+        "machine" indicates machine-generated labels.
 
   ***Bounding Box**: Attributes (XMin, XMax, YMin, YMax): define the coordinates of bounding boxes around objects in the images. 
    Specify the location and size of objects within the image.
