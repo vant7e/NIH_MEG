@@ -1,4 +1,4 @@
-filename,file_size,region_count,region_id,XMIN,YMIN,XMAX,YMAX,LabelName
+filename,file_size,region_count,region_id,XMin,YMin,Xmax,Ymax,LabelName,IsOccluded,IsTruncated,IsGroupOf,IsDepiction,IsInside
 frame_10.0.jpg,70421,4,0,187.0,258.0,248.0,301.0,/m/01g317
 frame_10.0.jpg,70421,4,1,227.0,186.0,512.0,306.0,/m/03jm5
 frame_10.0.jpg,70421,4,2,2.0,155.0,184.0,360.0,/m/07j7r
